@@ -27,15 +27,10 @@ Self-hosted 서비스를 활용한 개인 홈 서버 운영 프로젝트입니�
 ## 📚 기술 영역별 학습 진행 상황
 
 ### [Backend](./Backend)
-- [Python](./Backend/Python) - Django, FastAPI, Flask
-- [Java](./Backend/Java) - Spring Boot, JPA
-- [Node.js](./Backend/Node) - Express, NestJS
 - [공통 개념](./Backend#공통-개념) - 동시성 처리, 결합도/응집도 등
 
 ### [DevOps & Infrastructure](./DevOps)
 - [Docker](./DevOps/Docker) - 컨테이너화, Docker Compose
-- [Kubernetes](./DevOps/Kubernetes) - 배포 및 오케스트레이션
-- [Linux](./DevOps/Linux) - 시스템 관리, 네트워크
 
 ### [Database](./Database)
 - [MySQL/PostgreSQL](./Database/MySQL-PostgreSQL) - 쿼리 최적화, 트랜잭션
