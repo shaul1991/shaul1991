@@ -98,8 +98,3 @@ graph TB
 - **NVMe SSD**: 시스템, 데이터베이스, 빌드 캐시
 - **SSD**: Immich 썸네일 및 캐시
 - **HDD**: Immich 원본 미디어, MinIO 오브젝트 스토리지
-
-## 서비스별 상세 문서
-
-- [Immich 설치 및 구성](./immich.md)
-- [MinIO 설치 및 구성](./minio.md)
