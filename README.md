@@ -28,15 +28,18 @@
 ```mermaid
 graph TB
     subgraph Internet["🌐 인터넷"]
-        Client["클라이언트<br/>(웹/모바일)"]
+        ISP["인터넷 공급자<br/>(ISP)"]
+        Client["외부 클라이언트<br/>(웹/모바일)"]
+        Cloudflare["☁️ Cloudflare<br/>(DDNS)"]
     end
 
     subgraph HomeNetwork["🏠 홈 네트워크"]
-        subgraph ReverseProxy["리버스 프록시"]
-            Caddy["Caddy<br/>(HTTPS/Let's Encrypt)"]
-        end
+        Modem["인터넷 모뎀<br/>(브릿지 모드)"]
+        Router["메인 공유기<br/>(포트 포워딩)"]
 
         subgraph Server["🖥️ 홈 서버<br/>AMD Ryzen 4C/8T, 32GB RAM"]
+            Caddy["Caddy<br/>(리버스 프록시)<br/>HTTPS/Let's Encrypt"]
+
             subgraph Docker["🐳 Docker Compose"]
                 Immich["Immich<br/>(사진 관리)"]
                 MinIO["MinIO<br/>(오브젝트 스토리지)"]
@@ -52,7 +55,15 @@ graph TB
         end
     end
 
-    Client -->|HTTPS| Caddy
+    ISP -->|인터넷 회선| Modem
+    Modem --> Router
+    Router -->|유동 IP| Caddy
+    Router -.->|IP 변경 감지| Cloudflare
+
+    Client -->|DNS 조회| Cloudflare
+    Cloudflare -.->|도메인 → IP| Client
+    Client -->|HTTPS| Router
+
     Caddy -->|Proxy| Immich
     Caddy -->|Proxy| MinIO
     Caddy -->|Proxy| Jenkins
@@ -68,6 +79,8 @@ graph TB
     style Docker fill:#fff4e1
     style Storage fill:#f0f0f0
     style Caddy fill:#a8e6cf
+    style Cloudflare fill:#f4a460
+    style Router fill:#ffcccb
 ```
 
 ---
