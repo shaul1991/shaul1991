@@ -48,9 +48,9 @@ graph TB
             end
 
             subgraph Storage["💾 스토리지"]
-                NVMe["NVMe SSD<br/>(시스템/DB)"]
-                SSD["SSD 250GB<br/>(캐시)"]
-                HDD["HDD 4TB<br/>(데이터)"]
+                NVMe["NVMe SSD"]
+                SSD["SSD"]
+                HDD["HDD"]
             end
         end
     end
