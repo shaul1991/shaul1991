@@ -16,21 +16,59 @@
 
 ## 🏠 홈 서버 사이드 프로젝트
 
-### 현재 운영 중인 서비스
+### 운영 중인 Self-Hosted 서비스
 
-| 프로젝트 | 설명 | 기술 스택 | 상태 | 상세 문서 |
-|---------|------|----------|------|-----------|
-| **Immich** | 사진/동영상 백업 및 관리 서비스 (Google Photos 대안) | Docker, PostgreSQL, ML | 🟢 운영 중 | [📄 상세보기](./home-server/immich.md) |
-| **MinIO** | S3 호환 오브젝트 스토리지 + Filestash 웹 파일 관리자 | MinIO, Filestash, Docker | 🟢 운영 중 | [📄 상세보기](./home-server/minio.md) |
+- **Immich** - 사진/동영상 백업 및 관리
+- **MinIO** - S3 호환 오브젝트 스토리지
+- **Jenkins** - CI/CD 자동화
+- **Uptime Kuma** - 서비스 모니터링
 
-### 인프라 구성
-- 🖥️ **하드웨어**: AMD Ryzen (4코어/8스레드), 32GB RAM, 4TB HDD + 250GB SSD
-- 🐳 **컨테이너**: Docker, Docker Compose
-- 🌐 **네트워크**: Reverse Proxy (Caddy), HTTPS (Let's Encrypt)
-- 🔒 **보안**: VPN, SSL/TLS, 자체 호스팅
+### 인프라 구성도
 
-### 프로젝트 문서
-각 서비스의 상세한 설치 과정, 설정, 운영 방법은 [`home-server/`](./home-server) 폴더의 개별 문서를 참고하세요.
+```mermaid
+graph TB
+    subgraph Internet["🌐 인터넷"]
+        Client["클라이언트<br/>(웹/모바일)"]
+    end
+
+    subgraph HomeNetwork["🏠 홈 네트워크"]
+        subgraph ReverseProxy["리버스 프록시"]
+            Caddy["Caddy<br/>(HTTPS/Let's Encrypt)"]
+        end
+
+        subgraph Server["🖥️ 홈 서버<br/>AMD Ryzen 4C/8T, 32GB RAM"]
+            subgraph Docker["🐳 Docker Compose"]
+                Immich["Immich<br/>(사진 관리)"]
+                MinIO["MinIO<br/>(오브젝트 스토리지)"]
+                Jenkins["Jenkins<br/>(CI/CD)"]
+                Kuma["Uptime Kuma<br/>(모니터링)"]
+            end
+
+            subgraph Storage["💾 스토리지"]
+                NVMe["NVMe SSD<br/>(시스템/DB)"]
+                SSD["SSD 250GB<br/>(캐시)"]
+                HDD["HDD 4TB<br/>(데이터)"]
+            end
+        end
+    end
+
+    Client -->|HTTPS| Caddy
+    Caddy -->|Proxy| Immich
+    Caddy -->|Proxy| MinIO
+    Caddy -->|Proxy| Jenkins
+    Caddy -->|Proxy| Kuma
+
+    Immich -.->|DB| NVMe
+    Immich -.->|캐시| SSD
+    Immich -.->|미디어| HDD
+    MinIO -.->|저장소| HDD
+    Jenkins -.->|빌드| NVMe
+
+    style Server fill:#e1f5ff
+    style Docker fill:#fff4e1
+    style Storage fill:#f0f0f0
+    style Caddy fill:#a8e6cf
+```
 
 ---
 
