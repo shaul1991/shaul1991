@@ -80,7 +80,7 @@ graph TB
 
     Immich -.->|DB| NVMe
     Immich -.->|썸네일/캐시| SSD
-    Immich -.->|미디어(원본 데이터)| HDD
+    Immich -.->|원본 미디어| HDD
     MinIO -.->|저장소| HDD
     Jenkins -.->|빌드| NVMe
 
