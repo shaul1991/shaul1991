@@ -18,6 +18,7 @@
 
 ### 운영 중인 Self-Hosted 서비스
 
+- **Caddy** - 리버스 프록시 / HTTPS 자동화
 - **Immich** - 사진/동영상 백업 및 관리
 - **MinIO** - S3 호환 오브젝트 스토리지
 - **Jenkins** - CI/CD 자동화
@@ -38,7 +39,9 @@ graph TB
         Router["메인 공유기<br/>(포트 포워딩)"]
 
         subgraph Server["🖥️ 홈 서버 (AMD Ryzen 4C/8T, 32GB RAM)"]
-            Caddy["Caddy<br/>(리버스 프록시)<br/>HTTPS/Let's Encrypt"]
+            subgraph CaddyService["🐳 Caddy"]
+                Caddy["리버스 프록시<br/>HTTPS/Let's Encrypt<br/>(docker-compose)"]
+            end
 
             subgraph ImmichService["🐳 Immich"]
                 Immich["사진/동영상 관리<br/>(docker-compose)"]
@@ -85,12 +88,12 @@ graph TB
     Jenkins -.->|빌드| NVMe
 
     style Server fill:#e1f5ff
+    style CaddyService fill:#a8e6cf
     style ImmichService fill:#b2ebf2
     style MinIOService fill:#c5e1a5
     style JenkinsService fill:#ffcc80
     style KumaService fill:#ce93d8
     style Storage fill:#f0f0f0
-    style Caddy fill:#a8e6cf
     style Cloudflare fill:#f4a460
     style Router fill:#ffcccb
 ```
