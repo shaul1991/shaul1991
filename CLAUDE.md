@@ -15,9 +15,17 @@ shaul1991/
 │   ├── README.md
 │   ├── [기술명]/        # 예: Docker, Kubernetes, Linux 등
 │   └── ...
-└── Database/
+├── Database/
+│   ├── README.md
+│   ├── [DB명]/          # 예: MySQL-PostgreSQL, MongoDB 등
+│   └── ...
+├── Tools/
+│   ├── README.md
+│   ├── [도구명]/        # 예: VSCode, Claude-Code, Git 등
+│   └── ...
+└── Architecture/
     ├── README.md
-    ├── [DB명]/          # 예: MySQL-PostgreSQL, MongoDB 등
+    ├── [패턴명]/        # 예: Design-Patterns, Clean-Architecture 등
     └── ...
 ```
 
