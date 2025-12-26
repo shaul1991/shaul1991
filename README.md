@@ -27,39 +27,39 @@ Self-hosted 서비스를 활용한 개인 홈 서버 운영 프로젝트입니�
 ## 📚 기술 영역별 학습 진행 상황
 
 ### Backend
-- **Python** ████████░░ 80%
+- **Python**
   - Django, FastAPI, Flask
   - 비동기 프로그래밍
   - 데이터 처리 및 분석
 
-- **Java** ██████░░░░ 60%
+- **Java**
   - Spring Boot, Spring Framework
   - JPA, MyBatis
   - 객체지향 설계
 
-- **Node.js** ███████░░░ 70%
+- **Node.js**
   - Express, NestJS
   - REST API 개발
   - 실시간 통신 (WebSocket)
 
 ### DevOps & Infrastructure
-- **Docker** ████████░░ 80%
+- **Docker**
   - 컨테이너화, Docker Compose
   - 멀티 스테이지 빌드
 
-- **Kubernetes** ████░░░░░░ 40%
+- **Kubernetes**
   - 기본 개념 학습 중
   - 배포 및 오케스트레이션
 
-- **Linux** █████████░ 90%
+- **Linux**
   - 시스템 관리, 쉘 스크립팅
   - 네트워크 설정
 
 ### Database
-- **MySQL/PostgreSQL** ███████░░░ 70%
+- **MySQL/PostgreSQL**
   - 쿼리 최적화
   - 인덱싱, 트랜잭션
 
-- **MongoDB** █████░░░░░ 50%
+- **MongoDB**
   - NoSQL 기본 개념
   - CRUD 작업
