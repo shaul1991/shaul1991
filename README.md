@@ -79,8 +79,8 @@ graph TB
     Caddy -->|Proxy| Kuma
 
     Immich -.->|DB| NVMe
-    Immich -.->|캐시| SSD
-    Immich -.->|미디어| HDD
+    Immich -.->|썸네일/캐시| SSD
+    Immich -.->|미디어(원본 데이터)| HDD
     MinIO -.->|저장소| HDD
     Jenkins -.->|빌드| NVMe
 
