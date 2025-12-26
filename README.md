@@ -85,10 +85,10 @@ graph TB
     Jenkins -.->|빌드| NVMe
 
     style Server fill:#e1f5ff
-    style ImmichService fill:#fff4e1
-    style MinIOService fill:#fff4e1
-    style JenkinsService fill:#fff4e1
-    style KumaService fill:#fff4e1
+    style ImmichService fill:#b2ebf2
+    style MinIOService fill:#c5e1a5
+    style JenkinsService fill:#ffcc80
+    style KumaService fill:#ce93d8
     style Storage fill:#f0f0f0
     style Caddy fill:#a8e6cf
     style Cloudflare fill:#f4a460
