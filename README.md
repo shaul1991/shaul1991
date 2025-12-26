@@ -40,7 +40,7 @@ graph TB
         subgraph Server["🖥️ 홈 서버<br/>AMD Ryzen 4C/8T, 32GB RAM"]
             Caddy["Caddy<br/>(리버스 프록시)<br/>HTTPS/Let's Encrypt"]
 
-            subgraph Docker["🐳 Docker Compose"]
+            subgraph DockerServices["🐳 Docker 서비스 (각 서비스별 독립 docker-compose)"]
                 Immich["Immich<br/>(사진 관리)"]
                 MinIO["MinIO<br/>(오브젝트 스토리지)"]
                 Jenkins["Jenkins<br/>(CI/CD)"]
@@ -76,7 +76,7 @@ graph TB
     Jenkins -.->|빌드| NVMe
 
     style Server fill:#e1f5ff
-    style Docker fill:#fff4e1
+    style DockerServices fill:#fff4e1
     style Storage fill:#f0f0f0
     style Caddy fill:#a8e6cf
     style Cloudflare fill:#f4a460
