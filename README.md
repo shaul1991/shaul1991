@@ -18,18 +18,19 @@
 
 ### 현재 운영 중인 서비스
 
-| 프로젝트 | 설명 | 기술 스택 | 상태 |
-|---------|------|----------|------|
-| **미디어 서버** | 개인 미디어 스트리밍 서비스 | Plex, Docker | 🟢 운영 중 |
-| **NAS** | 파일 저장 및 백업 시스템 | TrueNAS, ZFS | 🟢 운영 중 |
-| **홈 오토메이션** | IoT 기기 통합 관리 | Home Assistant | 🟡 구축 중 |
-| **모니터링 대시보드** | 서버 모니터링 및 알림 | Prometheus, Grafana | 🟡 구축 중 |
+| 프로젝트 | 설명 | 기술 스택 | 상태 | 상세 문서 |
+|---------|------|----------|------|-----------|
+| **Immich** | 사진/동영상 백업 및 관리 서비스 (Google Photos 대안) | Docker, PostgreSQL, ML | 🟢 운영 중 | [📄 상세보기](./home-server/immich.md) |
+| **MinIO** | S3 호환 오브젝트 스토리지 + Filestash 웹 파일 관리자 | MinIO, Filestash, Docker | 🟢 운영 중 | [📄 상세보기](./home-server/minio.md) |
 
 ### 인프라 구성
-- 🖥️ **하드웨어**: [서버 사양 정보]
+- 🖥️ **하드웨어**: AMD Ryzen (4코어/8스레드), 32GB RAM, 4TB HDD + 250GB SSD
 - 🐳 **컨테이너**: Docker, Docker Compose
-- 🌐 **네트워크**: Reverse Proxy (Nginx/Traefik)
-- 🔒 **보안**: VPN, SSL/TLS
+- 🌐 **네트워크**: Reverse Proxy (Caddy), HTTPS (Let's Encrypt)
+- 🔒 **보안**: VPN, SSL/TLS, 자체 호스팅
+
+### 프로젝트 문서
+각 서비스의 상세한 설치 과정, 설정, 운영 방법은 [`home-server/`](./home-server) 폴더의 개별 문서를 참고하세요.
 
 ---
 
