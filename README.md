@@ -26,12 +26,6 @@ Self-hosted 서비스를 활용한 개인 홈 서버 운영 프로젝트입니�
 
 ## 📚 기술 영역별 학습 진행 상황
 
-### [Backend](./Backend)
-- [공통 개념](./Backend#공통-개념) - 동시성 처리, 결합도/응집도 등
-
-### [DevOps & Infrastructure](./DevOps)
-- [Docker](./DevOps/Docker) - 컨테이너화, Docker Compose
-
-### [Database](./Database)
-- [MySQL/PostgreSQL](./Database/MySQL-PostgreSQL) - 쿼리 최적화, 트랜잭션
-- [MongoDB](./Database/MongoDB) - NoSQL, CRUD
+- [Backend](./Backend) - 백엔드 개발 관련 학습
+- [DevOps & Infrastructure](./DevOps) - DevOps 및 인프라 관련 학습
+- [Database](./Database) - 데이터베이스 관련 학습
