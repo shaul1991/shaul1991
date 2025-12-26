@@ -2,11 +2,10 @@
 
 ## 📌 개인 소개
 
-- 🎓 **이름**: [Your Name]
-- 💼 **직무**: [Your Role/Position]
-- 📍 **위치**: [Your Location]
-- 📧 **이메일**: [your.email@example.com]
-- 🔗 **링크**: [Portfolio](https://yourportfolio.com) | [Blog](https://yourblog.com)
+- 🎓 **이름**: 김지훈 (KIM JIHOON)
+- 💼 **직무**: Backend Developer
+- 📧 **이메일**: shaul1991@gmail.com
+- 🔗 **GitHub**: [github.com/shaul1991](https://github.com/shaul1991)
 
 ### 관심 분야
 - 🖥️ 백엔드 개발
@@ -97,9 +96,8 @@
 
 ### 💬 연락하기
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Blog](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white)](https://yourblog.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shaul1991@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shaul1991)
 
 ---
 
