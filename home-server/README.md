@@ -89,8 +89,7 @@ graph TB
 - **CPU**: AMD Ryzen 5 2400G (8 threads) @ 3.600GHz
 - **GPU**: AMD ATI Radeon RX 580 8GB OC
 - **메모리**: 32GB RAM
-- **OS**: Ubuntu 24.04.3 LTS x86_64
-- **커널**: 6.8.0-90-generic
+- **OS**: Ubuntu 24.04
 
 ### 💾 스토리지 계층
 
