@@ -22,7 +22,7 @@ graph TB
         Modem["인터넷 모뎀<br/>(브릿지 모드)"]
         Router["메인 공유기<br/>(포트 포워딩)"]
 
-        subgraph Server["🖥️ 홈 서버 (AMD Ryzen 4C/8T, 32GB RAM)"]
+        subgraph Server["🖥️ 홈 서버 (AMD Ryzen 5 2400G, 32GB RAM, RX 580 8GB)"]
             subgraph CaddyService["🐳 Caddy"]
                 Caddy["리버스 프록시<br/>HTTPS/Let's Encrypt<br/>(docker-compose)"]
             end
@@ -82,6 +82,21 @@ graph TB
     style Router fill:#ffcccb
 ```
 
+## 하드웨어 사양
+
+### 💻 시스템 구성
+
+- **CPU**: AMD Ryzen 5 2400G (8 threads) @ 3.600GHz
+- **GPU**: AMD ATI Radeon RX 580 8GB OC
+- **메모리**: 32GB RAM
+- **OS**: Ubuntu 24.04
+
+### 💾 스토리지 계층
+
+- **NVMe SSD**: 시스템, 데이터베이스, 빌드 캐시
+- **SSD**: Immich 썸네일 및 캐시
+- **HDD**: Immich 원본 미디어, MinIO 오브젝트 스토리지
+
 ## 네트워크 구성
 
 ### 외부 접속 흐름
@@ -92,9 +107,3 @@ graph TB
 4. **Cloudflare DDNS** → 유동 IP 변경 자동 감지 및 DNS 업데이트
 5. **Caddy** → HTTPS 리버스 프록시, Let's Encrypt 자동 인증서
 6. **Docker 서비스들** → 각 서비스별 독립적인 docker-compose 구성
-
-### 스토리지 구성
-
-- **NVMe SSD**: 시스템, 데이터베이스, 빌드 캐시
-- **SSD**: Immich 썸네일 및 캐시
-- **HDD**: Immich 원본 미디어, MinIO 오브젝트 스토리지
