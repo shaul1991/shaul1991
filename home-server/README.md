@@ -22,7 +22,7 @@ graph TB
         Modem["인터넷 모뎀<br/>(브릿지 모드)"]
         Router["메인 공유기<br/>(포트 포워딩)"]
 
-        subgraph Server["🖥️ 홈 서버 (AMD Ryzen 5 2400G, 32GB RAM, RX 580 8GB)"]
+        subgraph Server["🖥️ 홈 서버"]
             subgraph CaddyService["🐳 Caddy"]
                 Caddy["리버스 프록시<br/>HTTPS/Let's Encrypt<br/>(docker-compose)"]
             end
@@ -83,13 +83,6 @@ graph TB
 ```
 
 ## 하드웨어 사양
-
-### 💻 시스템 구성
-
-- **CPU**: AMD Ryzen 5 2400G (8 threads) @ 3.600GHz
-- **GPU**: AMD ATI Radeon RX 580 8GB OC
-- **메모리**: 32GB RAM
-- **OS**: Ubuntu 24.04
 
 ### 💾 스토리지 계층
 
