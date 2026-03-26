@@ -1,16 +1,15 @@
 # 👋 안녕하세요!
 
-## 📌 개인 소개
+## 📌 소개
 
-- 🎓 **이름**: 김지훈 (KIM JIHOON)
-- 💼 **직무**: Backend Developer
-- 📧 **이메일**: shaul1991@gmail.com
-- 🔗 **GitHub**: <a href="https://github.com/shaul1991" target="_blank">github.com/shaul1991</a>
+- 🎓 김지훈 (KIM JIHOON)
+- 💼 Backend Developer
+- 📧 shaul1991@gmail.com
+- 🔗 [github.com/shaul1991](https://github.com/shaul1991)
 
-### 관심 분야
-- 🖥️ 백엔드 개발
-- 🏠 홈 서버 구축 및 운영
-- 📚 지속적인 학습과 성장
+> "어떻게 코드를 잘 짤까"보다 **"어떻게 문제를 잘 정의하고 해결할까"**를 고민합니다.
+> 요구사항이 정리되기를 기다리기보다 **비즈니스 맥락을 파악하여 문제를 먼저 정의**하고, 기획·디자인·운영 등 다양한 직군과의 협업을 통해 본질적인 해결책을 찾습니다.
+> AI를 활용하여 반복 작업을 효율화하고, 더 많은 시간을 **문제 해결과 의사소통**에 투자합니다.
 
 ---
 
@@ -22,7 +21,9 @@ AI 가상 테크 에이전시를 운영하고 있습니다.
 - Claude Code + `.claude` 설정 파일로 조직 운영 자동화
 - WHY 기반 의사결정 — 모든 기술 선택에 이유를 기록
 - 13단계 워크플로우로 요구사항 접수부터 배포까지 프로세스화
-- 🔗 [www.shaul.kr](https://www.shaul.kr)
+- 🌐 [www.shaul.kr](https://www.shaul.kr)
+
+---
 
 ### 🔭 최근 관심사
 
@@ -30,3 +31,9 @@ AI 가상 테크 에이전시를 운영하고 있습니다.
 - AI 협업에서의 문서화와 이슈 추적 ([Plane](https://plane.so) 활용)
 - 서버-권위(Server-Authoritative) 게임 아키텍처
 - 홈 서버에서 14개 프로젝트 셀프호스팅
+
+---
+
+### 📚 관심 분야
+
+`백엔드 개발` `홈 서버 구축/운영` `AI 협업 자동화` `지속적인 학습과 성장`
